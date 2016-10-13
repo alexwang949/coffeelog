@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>new coffee</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Lobster+Two' rel='stylesheet' type='text/css'>
+</head>
+
+<body align="">
+    <div class="container">
+        <h1 align="center" class="title">Add a new coffee </h1>
+        <form autocomplete="off" action="/coffee" method="post">
+            <div class="row">
+                <div class="six columns">
+                    <input class="u-full-width" style="" type="text" id="roaster" name="roaster" placeholder="roaster" />
+                </div>
+                <div class="six columns">
+                    <input class="u-full-width" style="" type="text" id="region" name="region" placeholder="region" />
+                </div>
+            </div>
+            <input class="u-full-width" style="" type="text" id="note" name="note" placeholder="note" />
+            <br>
+            <input class="button-primary" style="" type="submit" value="Submit" />
+        </form>
+        <a class="" href="/coffee">
+            <button class="button-primary">Back</button>
+        </a>
+    </div>
+</body>
+
+</html>
+<style type="text/css">
+.title {
+    font-family: 'Lobster Two', cursive;
+}
+
+html {
+    margin: 0 auto;
+}
+</style>

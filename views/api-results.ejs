@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Coffee</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+</head>
+
+	<body align="center">
+
+		<h1>Search Results</h1>
+		<ul>
+			<% for (i = 0; i < venuesData.length; i++) { %>
+
+				<!-- <img src=""> -->
+				<h4><%= venuesData[i].name %></h4>
+				<h4><%= venuesData[i].location.formattedAddress[0] %></h4>
+				<!-- <h4><%= venuesData[i].id %></h4> -->
+
+				<form autocomplete="off" action="/coffeeshop" method="post">
+					<input style="width: 200px; height: 30px" type="hidden" value="<%= venuesData[i].name %>" id="name" name="name" placeholder="name" />
+					<input style="width: 200px; height: 30px" type="hidden" value="<%= venuesData[i].location.formattedAddress[0]%>" id="region" name="address" placeholder="location" />
+					<br>
+					<input style="width: 200px; height: 30px; margin: 30px" type="submit" value="Add Coffee Shop!" />
+				</form>
+
+			<% } %>
+
+		</ul>
+		<a href="/coffee">Back</a>
+	</body>
+
+</html>
+
+<style type="text/css">
+
+
+</style>

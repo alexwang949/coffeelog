@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Coffee</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster|Lobster+Two' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div align="center" class="row">
+			<div class="u-full-width">
+				<h1 class="title"> All My Coffee</h1>
+			</div>
+		</div>
+		<a href="/coffee/new"><button class="button-primary">Add a Coffee</button></a>
+		<a href="/api"><button class="button-primary">search for coffee shop</button></a>
+
+		<table class="u-full-width">
+			<thead>
+				<tr>
+					<th>Roaster</th>
+					<th>Region</th>
+					<th>Note</th>
+					<th>Date</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% for (i = 0; i < coffee.length; i++) { %>
+					<tr class="all-coffee-body">
+						<td class="roaster"><%= coffee[i].roaster %></td>
+						<td class="region"><%= coffee[i].region %></td>
+						<td class="note"><%= coffee[i].note %></td>
+						<td><%= coffee[i].time.toDateString() %></td>
+						<td><a class="center" align="center" href='/coffee/<%=coffee[i]._id%>'><button>View</button></a></td>
+					</tr>
+				<% } %>
+			</tbody>
+
+		</table>
+
+	</div>
+
+</body>
+
+</html>
+
+<style type="text/css">
+
+	table thead th {
+		padding: 10px !important;
+	}
+
+	.all-coffee-body td {
+		padding: 10px;
+	}
+
+	.title {
+		font-family: 'Lobster Two', cursive;
+	}
+
+	thead	{
+		background-color: #ddd;
+	}
+
+	.roaster {
+		font-size: 20px;
+		font-weight: 800;
+	}
+
+	.region {
+		font-size: 20px;
+	}
+
+	.note {
+		font-size: 20px;
+	}
+
+
+</style>

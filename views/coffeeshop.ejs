@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Coffee Shops</title>
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+</head>
+
+	<body align="center">
+
+		<h1>All Coffee Shops</h1>
+		<ul>
+			<% for (i = 0; i < coffeeshop.length; i++) { %>
+
+				<h4><%= coffeeshop[i].name %></h4>
+				<h4><%= coffeeshop[i].address %></h4>
+				<hr>
+			
+			<% } %>
+
+		</ul>
+
+	</body>
+
+</html>
+
+<style type="text/css">
+
+
+</style>

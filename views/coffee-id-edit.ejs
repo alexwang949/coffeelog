@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Coffee</title>
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/skeleton.css">
+</head>
+
+	<body align="center">
+
+		<h1>Edit Coffee</h1>
+
+		<form autocomplete="off" action="/coffee/<%= coffee._id %>" method="post">
+			<input style="width: 200px; height: 30px" type="text" id="roaster" name="roaster" placeholder="roaster" value="<%= coffee.roaster %>" />
+			<input style="width: 200px; height: 30px" type="text" id="region" name="region" placeholder="region" value="<%= coffee.region %>"/>
+			<input style="width: 200px; height: 30px" type="text" id="note" name="note" placeholder="note" value="<%= coffee.note %>" />
+			<br>
+			<input style="width: 200px; height: 30px; margin: 30px" type="submit" value="Update" />
+		</form>
+
+		<a href="/coffee/<%= coffee._id %>"><button class="button-primary">Back</button></a>
+
+	</body>
+
+</html>
+
+<style type="text/css">
+
+
+</style>
